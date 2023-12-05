@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSA Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="floating-name" id="name">CUBOL TEAM</div>
+  <div class="flip-container">
+    <div class="outer-container">
+      <div class="container" style="position: relative;">
+        <div id="helpButtonContainer" style="position: absolute; top: 10px; right: 10px;">
+          <button onclick="displayHelp();" class="button-85" style="padding: 8px 12px; font-size: 12px;">?</button>
+        </div>
+        <center><img src="logo2.png" alt="" style="width: 100px;;">
+          <img src="logo3.png" alt="" style="width: 200px;;">
+          <img src="ctu1.png" alt="" style="width: 100px;;">
+        </center>
+        <h1>RSA CALCULATOR</h1>
+        <h2>Rivest-Shamir-Adleman</h2>
+        <label for="ptInput">Plaintext:</label>
+        <input type="text" id="ptInput" placeholder="Input your Plaintext" oninput="autoExpand(this)">
+        <label for="pInput">Value for p:</label>
+        <input type="number" id="pInput" placeholder="Input a prime number p">
+        <label for="qInput">Value for q:</label>
+        <input type="number" id="qInput" placeholder="Input a prime number q">
+        <label for="eInput">Value for e:</label>
+        <input type="number" id="eInput" placeholder="Input a prime number e">
+        <center>
+          <button onclick="calculateValues();" class="button-85">CALCULATE</button>
+        </center>
+        <div id="imageContainer"></div>
+        <p id="result"></p>
+      </div>
+    </div>
+
+    <div class="outer-container back-content" style="display: none;">
+      <div class="container" style="position: relative;">
+        <div id="helpButtonContainer" style="position: absolute; top: 10px; right: 10px;">
+          <button onclick="displayHelp1();" class="button-85" style="padding: 8px 12px; font-size: 12px;">?</button>
+        </div>
+        <center><img src="logo2.png" alt="" style="width: 100px;;">
+          <img src="logo3.png" alt="" style="width: 200px;;">
+          <img src="ctu1.png" alt="" style="width: 100px;;">
+        </center>
+        <h1>MODULUS CALCULATOR</h1>
+        <h2>Mathias</h2>
+        <label for="dividend">Enter Dividend:</label>
+        <input type="text" id="dividend" placeholder="Input the dividend">
+        <label for="exponent">Enter Exponent:</label>
+        <input type="text" id="exponent" placeholder="Input the exponent">
+        <label for="divisor">Enter Divisor:</label>
+        <input type="text" id="divisor" placeholder="Input the divisor">
+        <center>
+          <button onclick="calculate()" class="button-85">CALCULATE </button>
+        </center>
+        <div id="calculationSteps"></div>
+      </div>
+    </div>
+  </div>
+
+  <button onclick="toggleContainers();" class="button-85" style="position: fixed; bottom: 20px; right: 20px;">Mod
+    Calculator</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
